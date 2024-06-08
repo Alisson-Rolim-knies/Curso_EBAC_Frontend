@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 50px;
+    background-color: #ccc;
+}
+
+form {
+    background-color: #fff;
+    padding: 16px;
+    text-align: center;
+    border-radius: 20px ;
+}
+
+div{
+    text-align: center;
+}
+
+#button {
+    border-radius: 5px;
+    background-color: rgb(3, 53, 3);
+    color:#ffffff;
+    padding: 5px;
+}
+
