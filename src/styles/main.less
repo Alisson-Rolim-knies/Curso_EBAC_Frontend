@@ -1,0 +1,186 @@
+/* Variáveis */
+@primary-color: #e50914;
+@secondary-color: #141414;
+@header-bg: #111;
+@form-bg: #222;
+@input-bg: #333;
+@text-color: #fff;
+@font-family: ROBOTO, sans-serif;
+
+/* Estilos gerais para o corpo */
+body {
+    margin: 0;
+    font-family: @font-family;
+    background-color: @secondary-color;
+    color: @text-color;
+}
+
+/* Estilo do cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: @header-bg;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    background-color: @primary-color;
+}
+
+.section-title {
+    font-family: Pacifico, cursive;
+    font-size: 28px;
+}
+
+#cabecalho .nav .nav-link,
+.navbar-brand,
+.navbar-brand:hover,
+.nav-cardapio .nav-link.active:hover {
+    color: #fff;
+}
+
+/* Estilos das categorias de filmes */
+.categories {
+    padding: 20px;
+
+    .category {
+        margin-bottom: 20px;
+
+        h2 {
+            margin-top: 10px;
+            font-size: 32px;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .category-items {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+
+            img {
+                width: 350px;
+                border-radius: 10px;
+                transition: transform 0.3s;
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+/* Estilo do formulário de cadastro */
+.register-form {
+    padding: 20px;
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: @form-bg;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    input {
+        width: 95%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: none;
+        border-radius: 5px;
+        background-color: @input-bg;
+        color: @text-color;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: @primary-color;
+        border: none;
+        border-radius: 5px;
+        color: @text-color;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: darken(@primary-color, 5%);
+        }
+    }
+}
+
+/* Estilo para mensagens de erro */
+#errorMessages {
+    color: @primary-color;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-color: @header-bg;
+    color: @text-color;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 22px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+
+    .category-items img {
+        width: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .category-items img {
+        width: 200px;
+    }
+
+    .register-form {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .categories {
+        padding: 10px;
+    }
+}
